@@ -148,13 +148,8 @@
         line-height: calc(100vw / 5);
     }
     .indicator {
-        position: absolute;
         width: calc(87.5vw / 5);
         height: calc(87.5vw / 5);
-        background: var(--clr-secundary);
-        border-radius: 50%;
-        border: 6px solid var(--clr);
-        transition: .5s;
     }
     .navigation ul li:nth-child(1).active ~ .indicator {
         transform: translateX(calc((87.5vw / 5) * 0));
