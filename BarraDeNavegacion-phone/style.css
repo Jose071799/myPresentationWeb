@@ -67,7 +67,7 @@ body {
     z-index: 1;
 }
 
-.navigation ul li a {
+.navigation ul li button {
     position: relative;
     display: flex;
     justify-content: center;
@@ -76,9 +76,11 @@ body {
     width: 100%;
     text-align: center;
     font-weight: 500;
+    background: transparent;
+    border: none;
 }
 
-.navigation ul li a .icon {
+.navigation ul li button .icon {
     position: relative;
     display: block;
     line-height: 75px;
@@ -88,11 +90,11 @@ body {
     color: #fcfcfc;
 }
 
-.navigation ul li.active a .icon {
+.navigation ul li.active button .icon {
     transform: translateY(-35px);
 }
 
-.navigation ul li a .text {
+.navigation ul li button .text {
     position: absolute;
     color: #fcfcfc;
     font-weight: 400;
@@ -103,7 +105,7 @@ body {
     transform: translateY(20px);
 }
 
-.navigation ul li.active a .text {
+.navigation ul li.active button .text {
     opacity: 1;
     transform: translateY(10px);
 }
@@ -141,12 +143,22 @@ body {
 }
 
 .contenido {
-    background-color: #fcfcfc;
+    background: #fcfcfc;
     position: absolute;
     top: 88px;
     z-index: -1;
     width: 100vw;
     padding-bottom: 80px;
+    min-height: calc(100vh - 88px);
+}
+
+.home {
+    max-width: 1000px;
+    background: #fcfcfc;
+    margin: auto;
+    margin-top: 15px;
+    width: calc(100% - 20px);
+
 }
 
 
@@ -169,14 +181,14 @@ body {
         height: calc(87.5vw / 5);
     }
 
-    .navigation ul li.active a .icon {
+    .navigation ul li.active button .icon {
         transform: translateY(calc(87.5vw / -10));
     }
 
-    .navigation ul li.active a .text {
+    .navigation ul li.active button .text {
         transform: translateY(5px);
     }
-    .navigation ul li a .icon {
+    .navigation ul li button .icon {
         position: relative;
         line-height: calc(100vw / 5);
     }
@@ -207,6 +219,7 @@ body {
     .contenido {
         top: calc(17.2vw + 20px);
         padding-bottom: calc(98vw / 5);
+        min-height: calc(100vh - 17.2vw - 20px);
     }
     
 }
